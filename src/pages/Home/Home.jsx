@@ -1,12 +1,20 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
-import { RouterProvider } from "react-router-dom";
-import { router } from "../../routes/Routes";
+
 
 const Home = ()=>{
+    const currentUser =  localStorage.getItem('sprinter')
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(!currentUser){
+            navigate('/login')
+        }
+    },[currentUser])
+    console.log(currentUser);
     return(
         <div>
-            <RouterProvider router={router}/>
+            Heloo word
         </div>
     )
 }
