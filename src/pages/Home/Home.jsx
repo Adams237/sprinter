@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -10,6 +10,7 @@ const Home = ()=>{
         if(!currentUser){
             navigate('/login')
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[currentUser])
     console.log(currentUser);
     return(
