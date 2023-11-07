@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
 
+import logoFaceboo from '../../assets/images/Facebook-logo-500x313-2.png'
+
 const Login = () => {
     const [user,setUser] = useState({})
     const handleChange = (e)=>{
@@ -21,14 +23,14 @@ const Login = () => {
                 {/*<!-- Component -->*/}
                 <div className="mx-auto max-w-xl bg-[#f2f2f7] px-5 py-12 text-center md:px-10">
                     {/*<!-- Title -->*/}
-                    <h2 className="text-3xl font-bold md:text-5xl">Sign In</h2>
+                    <h2 className="text-2xl font-bold md:text-5xl">Se Connecter</h2>
                     {/*<!-- Button -->*/}
                     <button  className="mx-auto flex max-w-sm w-full mt-5 justify-center bg-[#276ef1] px-8 py-4 text-center font-semibold text-white transition [box-shadow:rgb(171,_196,_245)_-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px]">
                         <img src="https://assets.website-files.com/6357722e2a5f19121d37f84d/6357722e2a5f19d23637f876_GoogleLogo.svg" alt="" className="mr-4" />
                         <p className="font-bold">connection avec Google</p>
                     </button>
                     <button className="mx-auto flex max-w-sm w-full mt-5 justify-center bg-[#276ef1] px-8 py-4 text-center font-semibold text-white transition [box-shadow:rgb(171,_196,_245)_-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px]">
-                        <img src="https://www.chateauroux-les-alpes.com/loisirs/artistes/attachment/logo-facebook/#prettyPhoto[postimages]/0/" alt="" className="mr-4" />
+                        <img src={logoFaceboo} width={45} height={45} alt="" className="mr-4" />
                         <p className="font-bold">connection avec Facebook</p>
                     </button>
                     {/*<!-- Devider -->*/}
